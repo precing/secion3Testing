@@ -45,18 +45,24 @@ public void getCodigoaa000(){
 	 assertThat(resultado,is("aa000"));
 	 
 	 }
-@Test
+@Test  (expected=NullPointerException.class)
 public void getCodigoNulo(){
 	 /*arrange*/
 	categotia.setCodigo(null);
-	
-	 /*act*/
-	 String resultado=categotia.getCodigo();
-	 /*assert*/
-	 assertThat(resultado,is(""));
-	 ///prueva
 	 
 	 }
 
+@Test
+public void getCodigoSizeMayor5(){
+	categotia.setCodigo("esto tiene mas de 5 caracteres");
+	String resultado= categotia.getCodigo();
+	assertThat(resultado,is("esto "));
+}
+@Test
+public void setNombreLuxo(){
+	categotia.setNombre("Luxo");	
+	String resultado= categotia.getNombre();
+	assertThat(resultado,is("Luxo"));
+}
 
 }
