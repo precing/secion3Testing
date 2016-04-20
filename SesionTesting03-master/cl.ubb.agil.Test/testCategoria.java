@@ -54,6 +54,7 @@ public void getCodigoNulo(){
 	 String resultado=categotia.getCodigo();
 	 /*assert*/
 	 assertThat(resultado,is(""));
+	 ///prueva
 	 
 	 }
 
