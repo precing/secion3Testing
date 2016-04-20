@@ -7,8 +7,6 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 
 import cl.ubb.agil.Categoria;
-import cl.ubb.agil.Producto;
-
 
 public class testCategoria {
 
@@ -34,6 +32,28 @@ public void getNombreGuitarraElectrica(){
 	 
 	 /*assert*/
 	 assertThat(resultado,is("guitarra electrica"));
+	 
+	 }
+
+@Test
+public void getCodigoaa000(){
+	 /*arrange*/
+	
+	 /*act*/
+	 String resultado=categotia.getCodigo();
+	 /*assert*/
+	 assertThat(resultado,is("aa000"));
+	 
+	 }
+@Test
+public void getCodigoNulo(){
+	 /*arrange*/
+	categotia.setCodigo(null);
+	
+	 /*act*/
+	 String resultado=categotia.getCodigo();
+	 /*assert*/
+	 assertThat(resultado,is(""));
 	 
 	 }
 
