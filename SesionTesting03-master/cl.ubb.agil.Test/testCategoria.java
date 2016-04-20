@@ -11,9 +11,6 @@ import cl.ubb.agil.Categoria;
 public class testCategoria {
 
 private Categoria categotia;
-
-
-
 private String nombre = "guitarra electrica";
 private String codigo = "aa000";
 

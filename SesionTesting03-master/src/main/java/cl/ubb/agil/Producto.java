@@ -54,8 +54,6 @@ public class Producto {
 		}else{
 			throw new ExcepcionDeProducto();
 		}
-			
-		
 	}
 	
 	
