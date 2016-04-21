@@ -67,9 +67,35 @@ public class TestProducto {
 	 boolean resultado = producto.isBajoStock();
 	 assertThat(resultado, is(false));
  }
+ @Test
+ public void getStockFaltanteProducto(){
+	 Producto producto;
+		producto= new Producto(nombre,min,max);
+		 int resultado=producto.getStockFaltante();
+		 assertThat(resultado,is(10));
+ }
+ @Test
+ public void getStockFaltanteContructor1(){
+		producto= new Producto(nombre,min,max);
+		 int resultado=producto.getStockFaltante();
+		 assertThat(resultado,is(10));
+ }
+ @Test
+ public void setNombreGuitarra(){
+	 
+	 producto.setNombre("Guitarra");
+	 String resultado=producto.getNombre();
+	 assertThat(resultado,is("Guitarra"));
+ }
  
- 
- 
+ @Test
+ public void setNombreGuitarraProducto(){
+	 Producto producto;
+	 producto= new Producto(nombre,min,max);
+	 producto.setNombre("Guitarra");
+	 String resultado=producto.getNombre();
+	 assertThat(resultado,is("Guitarra"));
+ } 
  
  
 }//fin de la clase
