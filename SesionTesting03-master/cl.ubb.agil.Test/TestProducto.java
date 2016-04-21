@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import cl.ubb.agil.Categoria;
+import cl.ubb.agil.ExcepcionDeProducto;
 import cl.ubb.agil.Existencia;
 import cl.ubb.agil.Producto;
 import jdk.net.NetworkPermission;
@@ -97,5 +98,13 @@ public class TestProducto {
 	 assertThat(resultado,is("Guitarra"));
  } 
  
+ @Test(expected=ExcepcionDeProducto.class)
+ public void getCodigoProximaExistenciaError() throws ExcepcionDeProducto {
+ }
+ 
+ @Test
+ public void getCodigoProximaExistenciaCategoriaNull(){
+	 
+ }
  
 }//fin de la clase
